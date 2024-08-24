@@ -327,8 +327,13 @@
           text,
           ease: "power",
         });
-      if (click > 5) {
+        if  
+      if (click > 6) {
+        click = 0;
+      }
+      else if (click > 5) {
         cimol.src = 'nangis.gif';
+        click = 0;
       }
       else if (click > 1) {
         cimol.src = 'tanya.gif';
