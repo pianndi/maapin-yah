@@ -80,6 +80,17 @@
       font-family: sans-serif;
     }
 
+    .nama .arrow {
+      /* add triangle up */
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      border: 0.75rem solid transparent;
+      border-bottom-color: white;
+    }
+
     .nama:hover {
       background: white;
       color: black;
@@ -203,7 +214,9 @@
         <button class="ga">Gamau</button>
       </div>
     </fieldset>
-    <a class="nama" href="https://instagram.com/pianndi">Aku</a>
+    <a class="nama" href="https://instagram.com/pianndi">
+      <div class="arrow"></div>Aku
+    </a>
   </div>
   <script>
     gsap.registerPlugin(TextPlugin)
@@ -306,6 +319,11 @@
         background: 'white',
         color: 'black',
         borderColor: 'black',
+        duration: 5,
+        ease: "power.out",
+      });
+      gsap.to('.arrow', {
+        borderBottomColor: 'black',
         duration: 5,
         ease: "power.out",
       });
