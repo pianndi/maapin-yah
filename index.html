@@ -327,7 +327,9 @@
           text,
           ease: "power",
         });
-      if (click > 5) {
+      if (click > 6) {
+        click = 0;
+      } else if (click > 5) {
         cimol.src = 'nangis.gif';
       }
       else if (click > 1) {
