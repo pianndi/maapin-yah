@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maapin Yah...</title>
-  <!-- HTML Meta Tags -->
-  <title>Maapin Yah...</title>
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://pianndi.github.io/maapin-yah/">
   <meta property="og:type" content="website">
@@ -221,7 +219,7 @@
         if (loaded === assets.length) {
           gsap.to('.loader', {
             autoAlpha: 0,
-            duration: 0.5,
+            duration: 0.75,
           });
           gsap.fromTo('#cimol', {
             // scale
@@ -279,6 +277,8 @@
       'Ngemil apa yang paling enak? Ngemilikin kamu sepenuhnya.',
       'Jepang bikin robot. Jerman bikin mobil. Kamu bikin kangen.',
       'Katanya kalau sering hujan itu bisa bikin seseorang terhanyut, kalau aku sekarang sedang terhanyut di dalam cintamu.',
+      'Kalau aku jadi wakil rakyat aku pasti gagal deh. Gimana mau mikirin rakyat, kalau yang selalu ada di pikiranku hanyalah kamu',
+      'Tanggal merah sekalipun aku tidak libur untuk memikirkan kamu.'
     ]
     function getKata() {
       return kataKata[Math.floor(Math.random() * kataKata.length)];
@@ -327,13 +327,10 @@
           text,
           ease: "power",
         });
-        
-      if (click > 6) {
-        click = 0;
-      }else if (click > 5) {
+      if (click > 5) {
         cimol.src = 'nangis.gif';
-        click = 0;
-      }else if (click > 1) {
+      }
+      else if (click > 1) {
         cimol.src = 'tanya.gif';
       } else {
         cimol.src = 'me.gif';
